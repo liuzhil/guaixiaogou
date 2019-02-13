@@ -1,0 +1,687 @@
+
+/*轮播图 */
+ #demo>ul>li{width:20px;height:20px;
+	  border-radius: 50%;
+	  background: rgb(172, 171, 171);
+	}
+    #demo>ul>li.active{background:#0aa1ed;}
+    #demo>a{
+      background: rgba(0,0,0,0.5);
+	  width: 5%;
+	  height:20%;
+	  top: 40%;
+	}
+    #demo>.carousel-inner>.carousel-item>img{
+      width:100%;
+    }
+#banner{
+	width:1024px;
+	height:266px;
+	overflow:hidden;
+	margin:0 auto;
+	display:relative;
+	/* border:1px solid red; */
+}
+.display-none{
+	display:none;
+}
+#banner ul.circle{
+	display:absolute;
+	width:100px;
+	height:20px;
+  bottom:10px;left:0px;
+}
+#banner ul.circle li{
+	border-radius:50%;
+	width:20px;
+	height:20px;
+	background:red;
+	float:left;
+}
+.block{
+	display:block;
+}
+#hover{
+	display:flex;
+	justify-content:space-between;
+	width:1100px;
+	margin:0 auto;
+/*	border:2px solid red;*/
+	margin-top:20px;
+	margin-bottom:20px;
+
+}
+#hover>a{
+	width:250px;
+	background:#fff;
+	height:80px;
+	transition:all .5s;
+}
+#hover>a>div>p:first-child{
+	margin-bottom:10px;
+}
+#hover>a p.p1{
+	font-size:15px;
+	color:#3a2d2d;
+	margin:0 auto;
+}
+#hover>a>div{
+	float:right;
+	padding-top:17px;
+	padding-right:25px;
+	font-size:20px;
+}
+#hover>a:lafer{
+	content:"";
+	clear:both;
+	display:block;
+}
+#hover>a>img{
+		line-height:80px;
+}
+#hover>a:hover{
+	transform: translateY(-2px);
+	background:#eee;
+/*	border:1px solid right: ;d;*/
+	box-shadow:0 0 5px 2px #888;
+}
+#hot-animals{
+	width:1100px;
+	background:#fff;
+	margin:0 auto;
+
+}
+#hot-animals:lafer{
+	content:"";
+	clear:both;
+	display:block;
+}
+#hot-animals h3{
+	width:1100px;
+	height:60px;
+	text-align:center;
+	line-height:60px;
+	border-bottom:1px solid #eee;
+	}
+#animals{
+	display:flex;
+	justify-content:place-around;
+	flex-flow: column nowrap;
+	align-items:center;
+}
+/*轮播图*/
+#demo>ul>li{
+  width:20px;height:20px;
+  border-radius: 50%;
+  background: rgb(175, 174, 174);
+	}
+#demo>ul>li.active{
+  background:#0aa1ed;
+}
+#demo>a{
+  background: rgba(143, 142, 142, 0.5);
+  width: 3%;
+  height:20%;
+  top: 40%;
+  border-radius: 5%;
+  opacity: 0.5;
+}
+#demo>a:hover{
+	opacity:1;
+	background:rgb(63, 63, 63);
+}
+#demo>.carousel-inner>.carousel-item>img{
+    width:100%;
+}
+#frist-floor{
+
+}
+ #bg-img1{
+	background:url("../image/brand_animals/logo/10.png") no-repeat center center;
+}
+#bg-img2{
+	background:url("../image/brand_animals/logo/11.png") no-repeat center center;
+}
+#bg-img3{
+	background:url("../image/brand_animals/logo/17.png") no-repeat center center;
+}
+#bg-img4{
+	background:url("../image/brand_animals/logo/20.png") no-repeat center center;
+}
+#bg-img5{
+	background:url("../image/brand_animals/logo/15.png") no-repeat center center;
+}
+#bg-img6{
+	background:url("../image/brand_animals/logo/18.png") no-repeat center center;
+}
+#bg-img7{
+	background:url("../image/brand_animals/logo/14.png") no-repeat center center;
+}
+#bg-img8{
+	background:url("../image/brand_animals/logo/16.png") no-repeat center center;
+}
+#bg-img9{
+	background:url("../image/brand_animals/logo/4.png") no-repeat center center;
+}
+#bg-img10{
+	background:url("../image/brand_animals/logo/3.png") no-repeat center center;
+}
+#bg-img11{
+	background:url("../image/brand_animals/logo/7.png") no-repeat center center;
+}
+#bg-img12{
+	background:url("../image/brand_animals/logo/9.png") no-repeat center center;
+}
+#bg-img13{
+	background:url("../image/brand_animals/logo/5.png") no-repeat center center;
+}
+#bg-img14{
+	background:url("../image/brand_animals/logo/2.png") no-repeat center center;
+}
+
+#bg-img15{
+	background:url("../image/brand_animals/logo/1.png") no-repeat center center;
+}
+#bg-img16{
+	background:url("../image/brand_animals/logo/8.png") no-repeat center center;
+}
+#animals>ul>li>a{
+	width:80px;
+	height:80px;
+	border:2px solid #eee;
+	border-radius:50%;
+}
+
+#animals ul{
+	margin-top:30px;
+	width:1100px;
+	display:flex;
+	justify-content:space-around;
+	flex-flow:row wrap;
+	align-items:center;
+}
+#animals ul li{
+	width:80px;
+	margin:0px 25px 20px 25px
+}
+#animals ul li>div>a{
+	color:#4d0a948c;
+	font-size:14px;
+}
+#animals ul li>div{
+	margin-top:20px;
+	height:30px;
+	background:#f1c984;
+	text-align:center;
+	line-height:30px;
+	border-radius:40%
+}
+#animals ul li>div>a:hover{
+		color:#32a8a9fc;
+}
+.buy-animals{
+	background:#dce3ee;
+	width:1100px;
+	display:flex;
+	flex-flow:row wrap;
+	justify-content:space-between;
+	margin:0 auto;
+/*	border:2px solid red;*/
+	margin-top:20px;
+	margin-bottom:20px;
+}
+.buy-animals h3{
+    background:#dce3ee;
+	width:1100px;
+	height:60px;
+	text-align:center;
+	line-height:60px;
+	border-bottom:1px solid #eee;
+	}
+#animals-card{
+    margin-top:20px;
+	width:1100px;
+	margin:0 auto;
+	/* border:1px solid red; */
+	display:flex;
+	justify-content:space-around;
+	flex-flow:row wrap;
+	align-items:center;
+	
+}
+#animals-card>div{
+	width:250px;
+	border:2px solid #fff;
+	height:400px;
+	margin-top:10px;
+	 background:#fff;
+	 transition: all .5s;
+}
+
+#animals-card>div:hover{
+	border:2px solid  #e4a029 ;
+	box-shadow:0px 0px 2px 2px  #e4a029 ;
+	/* background:#dce3ee; */
+
+}
+	
+
+#animals-card>div p{
+	font-size:15px;
+	font-family:"黑体";
+	margin-top:10px;
+	color:#555555;
+}
+#animals-card>div p>span{
+	color:#ef9d12;
+	font-size:18px;
+	font-weight:800;
+}
+#animals-card div.dog-img{
+	height:250px;
+	overflow:hidden;
+	
+}
+#animals-card div.dog-img img{
+	opacity:0.8;
+	transition:all 1s;
+
+}
+#animals-card div.dog-img img:hover{
+	opacity:1.0;
+	/* margin:3px; */
+	transform: scale(1.2,1.2);
+	
+}
+#fenye{
+  margin-top:20px;
+  width:1100px;
+	float:right;
+	/* border:1px solid red; */
+}
+#fenye>ul {
+	float:right;
+	display:flex;
+	justify-content:center;
+	flex-flow:row nowrap;
+	align-items:center;
+}
+#fenye>ul li{
+	margin:0 10px;
+	width:30px;
+	text-decoration:none;
+	text-align:center;
+	/*box-shadow:1px 1px 3px #0aa1ed inset;*/
+	background:#29c0e45e;
+}
+#fenye>ul li:hover{
+	background:#c8deea;
+}
+#fenye>ul li:active{
+	box-shadow:2px 2px 3px #000 inset;
+}
+#fenye>ul li a{
+	color:#0aa1ed;
+	line-height:25px;
+	font-weight:900
+}
+#fenye>ul:after{
+	content:"";
+	clear:both;
+	display:block;
+}
+#fenye li.fenye-li{
+	width:60px;
+}
+#animals-histely{
+	width:1100px;
+	margin:0 auto;
+	background:#c8deeade;
+	display:flex;
+	justify-content:space-around;
+	align-items:start;
+	flex-flow:row nowrap;
+}
+/*宠物资讯*/
+#animals-information{
+	width:1100px;
+	padding:10px;
+	padding-top:0px;
+	margin:0 auto;
+}
+/*宠物资讯第一板块*/
+.information-first{
+	width:100%;
+	height:80px;	
+	font-size:30px;
+/*	text-shadow:1px 5px 5px 0px #555555;*/
+	color:#555555;
+	line-height:80px;
+	text-align:center;
+/*	margin-bottom:20px;*/
+	border-bottom:1px solid #aaa;
+}
+.zx{
+	color:#FF9800;
+}
+/*宠物资讯第二板块*/
+.information-second{
+	width:100%;
+
+}
+.information-second>ul{
+	display:flex;
+	justify-content:space-around;
+	align-items:center;
+	flex-flow:row nowrap;
+	color:#aaa;
+	list-style:none;
+	border-bottom:1px solid #aaa;
+}
+.information-second>ul>li{
+	width:100%;
+	margin:10px;
+	height:50px;
+	text-align:center;
+	line-height:50px;
+}
+.information-second>ul>li>a{
+	text-decoration:none;
+	color:#007bff;
+}
+.information-second>ul>li>a:hover{
+	color:#1e03ff;
+	font-weight:700;
+	font-size:25px;
+}
+/*宠物资讯第三板块*/
+.information-third{
+	width:100%;
+	padding:10px;
+}
+.information-third:after{
+	content:"";
+	clear:both;
+	display:block;
+}
+.information-third>div:first-child{
+	width:750px;
+	/* border:1px solid red; */
+}
+.information-third>div>ul>li{
+		width:748px;
+		border-bottom:1px dotted #aaa;
+/*	height:100px;*/
+}
+.information-third>div>ul>li>a{
+  display:block;
+	width:100%;
+	position:relative;
+	font-size:20px;
+	font-weight:600;
+	text-decoration:none;
+	color:#ff9800d6;
+}
+.information-third>div>ul>li>a>span{
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	font-size:15px;
+	color:#888888;
+	font-weight:normal;
+}
+.information-third>div>ul>li>a:hover{
+	color:#FF9800;
+}
+.information-third>div>ul>li>p{
+	margin:10px 0px;
+/*	height:40px;*/
+/*	text-overflow:ellipsis;*/
+	overflow:hidden;
+	display:-webkit-box;
+	text-overflow:ellipsis;
+/*	text-indent:30px;*/
+	line-height:1.5;
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:3;
+	font-size:15px;
+	color:#888888;
+}
+.information-third>div{
+	float:left;
+}
+#smallCarousel{
+	width:300px;
+	height:450px;
+	position:relative;
+	overflow:hidden;
+	/* border:1px solid red; */
+}
+#smallCarousel>img{
+	width:100%;
+	position:absolute;
+	top:0px;left:0px;
+	opacity:0;
+  transition:all .5s linear;
+}
+#smallCarousel>img.show{
+	opacity:1;
+}
+/* 护养中心 */
+#nurse-center{
+	width:1100px;
+	padding:10px;
+	padding-top:0px;
+	margin:0 auto;
+}
+.center-second{
+	width:100%;
+	padding:10px;
+}
+.center-second:after{
+	content:"";
+	clear:both;
+	display:block;
+}
+.center-second>div{
+	float:left;
+}
+.center-second-first{
+	width:750px;
+}
+.animals-nurse{
+	color:#222222;
+	font-size:20px;
+	width:100%;
+	text-align:center;
+	margin:10px 0;
+}
+.nurse-document{
+	width:100%;
+	margin:10px 0;
+	display:flex;
+	justify-content:space-between;
+	align-items: center;
+}
+.nurse-document-flex{
+	width:100%;
+}
+.nurse-document-ul{
+	width:350px;
+	list-style: none;
+}
+.nurse-document-ul>li{
+	width:100%;
+	vertical-align:middle;
+	margin-bottom:10px;
+}
+.nurse-document-ul>li:after{
+	content:"";
+	clear:both;
+	display:block;
+}
+/* #right-img{
+	width:100px;
+	height:80px;
+} */
+.right-text{
+	float:left;
+}
+li.right-li>div:first-child{
+	width:100px;
+	height:100px;
+	/* margin-top:20px; */
+}
+li.right-li>div:nth-child(2){
+	margin-left:20px;
+	width:230px;
+}
+li.right-li>div.right-text>p{
+	color:#222222;
+	/* font-size:20px; */
+	/* text-decoration:none; */
+	width:100%;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	/* margin:10px 0px; */
+	margin:0px;
+	width:100%;
+}
+p.right-last-p{
+	color:#a5a4a4!important;
+	font-size:13px;
+}
+li.right-li>div.right-text>p:first-child{
+	color:#222222;
+	font-size:18px;
+	margin:0px 0px 10px 0px;
+	white-space: nowrap;
+}
+li.right-li>div.right-text>p:nth-child(2){
+	color:#3a2d2d;
+	font-size:14px;
+	display:-webkit-box;
+	/* -webkit-box-orient:vertical; */
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	height:42px;
+	line-height:1.5;	
+}
+li.right-li>div.right-text>img{
+	vertical-align:middle;
+	width:100px;
+	height:80px;
+}
+a.right-inline-block{
+	display:inline-block;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	width:240px;
+	vertical-align:middle;
+	color:#3a2d2d;
+}
+span.inline-block-span{
+	display:inline-block;
+	margin-left:30px;
+	/* vertical-align:middle; */
+}
+/* 宠物资讯右侧部分 */
+div.center-second-second{
+	width:300px;
+}
+div.second-first{
+	width:300px;
+	text-align:center;
+	position:relative;
+
+}
+div.second-first>span{
+	width:100px;
+	height:40px;
+	display:inline-block;
+	line-height:40px;
+	font-size:18px;
+	color:#888888;
+	border-top-left-radius:5px;
+	border-top-right-radius:5px;
+	border-bottom:1px solid #222222;
+
+}
+div.second-first>span>a{
+	text-decoration: none;
+}
+div.second-second{
+	width:300px;
+	height:370px;
+	display:flex;
+	justify-content:space-around;
+	align-items: center;
+	flex-flow:row wrap;
+	align-content:space-around;
+	margin:10px 0px;
+	
+}
+div.second-second>a{
+	display:inline-block;
+	width:70px;
+	height:30px;
+	font-size:13px;
+	background:#b8b7b7;
+	color:#fff;
+	text-align:center;
+	line-height:30px;
+	text-decoration:none;
+}
+.center-second-second>div:first-child>div{
+	position:absolute;
+	left:47px;top:0px;
+	width:100px;
+	height:40px;
+	border-bottom:1px solid #fff;
+}
+/* 点击时显示或隐藏 */
+.hide{
+	display:none!important;
+}
+/*#animals-histely div.histely-width{*/
+/*	width:330px;*/
+/*	margin-top:20px;*/
+/*	border:1px solid red;*/
+/*	background:#fff;*/
+/*}*/
+/*#animals-histely div.histely-width>div:after{*/
+/*	content:"";*/
+/*	clear:both;*/
+/*	display:block;*/
+/*}*/
+/*#animals-histely div.histely-width>div{*/
+/*	height:40px;*/
+/*	border:2px solid #eee;*/
+/*	padding-top:20px;*/
+/*}*/
+/*.histely-left{*/
+/*	float:left;*/
+/*}*/
+/*.histely-right{*/
+/*	float:right;*/
+/*}*/
+/*#animals-histely ul li p,#animals-histely ul li p>a{*/
+/*	font-size:12px;*/
+/*	color:#334c5ade;*/
+/*}*/
+/*#animals-histely ul li:after{*/
+/*	content:"";*/
+/*	clear:both;*/
+/*	display:block;*/
+/*}*/
+/*#animals-histely ul li{*/
+/*	border-bottom:2px dashed #eee;*/
+/*	margin-top:20px;*/
+/*	*/
+/*}*/
+/*#heistely-p{*/
+/*	font-size:25px;*/
+/*	font-weight:600;*/
+/*	font-family:黑体;*/
+/*}*/

@@ -1,0 +1,786 @@
+<!doctype html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+     <link rel="stylesheet" href="css/header.css">
+     <link rel="stylesheet" href="css/details.css">
+     
+<!--      <link rel="stylesheet" href="../bootstrapCss/bootstrap.css"/> -->
+  </head>
+  <body>
+    <!--头部-->
+    <header class="max-width" id="header">
+      <div class="top-black" id="header-top">
+        <p class="float-left">欢迎来到淘狗网，宠物狗销售商城！</p>
+        <div class="float-right">
+          <ul class="flex-wrap-end">
+            <li>
+              <a href="#">登录</a>
+              <b>|</b>
+            </li>
+            <li>
+              <a href="#">注册</a>
+              <b>|</b>
+            </li>
+            <li>
+              <a href="#" class="yellwo">免费发布信息</a>
+              <b>|</b>
+            </li>
+            <li>
+              <a href="#">手机淘狗</a>
+              <b>|</b>
+            </li>
+            <li>
+              <a href="#">淘狗网</a>
+              <b>|</b>
+            </li>
+            <li>
+              <a href="#">帮助中心</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="header-search">
+        <div class="d1">
+          <img src="image/images/logo.png" alt="">
+        </div>
+        <div class="d2">
+          <a href="javascript:;">狗狗</a>
+          <input type="text" id="text" placeholder="请输入搜索内容">
+          <input type="submit" value="搜索" class="sousuo">
+        </div>
+      </div>
+      <nav id="nav">
+        <div class="clear">
+          <ul class="ul-flex">
+            <li><a href="javascript:;">首页</a></li>
+            <li><a href="javascript:;">挑选爱犬</a></li>
+           
+            <li><a href="javascript:;">挑选爱猫</a></li>
+          
+            <li><a href="javascript:;">宠物咨询</a></li>
+            
+            <li><a href="javascript:;">狗狗百科</a></li>
+           
+            <li><a href="javascript:;">猫猫百科</a></li>
+          
+            <li><a href="javascript:;">宠小宝APP</a></li>
+            <li id="select">
+            <div>
+             <a href="#
+             javascript:;" class="animals-a">加盟宠物店 <span class="sanjiao"></span></a>
+             <ul>
+               <li><a href="#
+                javascript:;">开宠物店</a></li>
+               <li><a href="#
+                javascript:;">学宠物美容</a></li>
+               <li><a href="#
+                javascript:;">学训犬</a></li>
+             </ul>
+            </div>
+            </li>
+          </ul>
+          </div>
+      </nav>
+    </header> 
+     <div id="animals-details" class="clear">
+            <!--面包屑导航-->
+            <div class="bread-nav">
+              <ul class="clear">
+                <li><a href="#
+                  javascript:;">北京市淘狗网</a></li>
+                <li><span> > </span></li>
+                <li><a href="#
+                  javascript:;">北京市 宠物狗</a></li>
+                <li><span> > </span></li>
+                <li><a href="#
+                  javascript:;">北京市法国斗牛犬</a></li>
+                <li><span> > </span></li>
+                <li><a href="#
+                  javascript:;"> CKU犬舍出售纯种法国斗牛犬 专业繁育 品质保证</a></li>
+              </ul>
+            </div>
+             <!--第一部分小详情框-->
+            <div id="dog-details" class="clear">
+              <!--图片详情部分-->
+              <div class="dog-mig">
+                <!-- 超大图部分(隐藏) -->
+                <div class="dog-lgmig" :style="lgImgStyle" :class="{'d-none':lgdiv}">
+                </div>
+                <!-- 遮罩层 -->
+                <div class="zhezhaoceng" :class="{'d-none':smdiv}" :style="position"></div>
+                <!--中图部分-->
+                <div id="big-img">
+                  <img :src="md" alt="">
+                </div>
+                <div class="toumingceng" @mouseenter="over" @mouseleave="out" @mousemove="move($event)"></div>
+                <!-- 四张小图部分   -->
+                <div id="small-mig">
+                  <ul>
+                    <li  v-for="item of list" ><img :src="item.sm" @mouseenter="enter(item.md,item.lg)"
+                    alt="" ></li>
+                    <!-- <li><img src="image/dog-details/2.png" alt=""    style="width:90px;height:90px;"></li>
+                    <li> <img src="image/dog-details/3.png" alt=""  style="width:90px;height:90px;"></li>
+                    <li><img src="image/dog-details/4.png" alt=""  style="width:90px;height:90px;"></li> -->
+                  </ul>
+                </div>
+              </div>
+              <!--右侧文字介绍部分-->
+              <div class="right-details">
+                  <!-- 微信隐藏模块 -->
+                <div class="quanju" v-show="wx">
+                    <div class="dialog-wrap">
+                      <div class="wrap-header">
+                          微信咨询
+                          <p class="wrap-right-icon" @click="wx1"></p>
+                      </div>
+                      <div class="wrap-code">
+                          <img src="image/details-img/9.png" alt="">
+                          <p>微信号：13246413</p>
+                      </div>
+                      <div class="wrap-text">
+                          微信扫二维码进行咨询。我将会发给你更多的照片和视频，让您<br>
+                          挑选。联系我时，请说是在“淘狗网”看到的有折扣！
+                      </div>
+                    </div>
+                        <!-- <img src="image/details-img/9.png" alt=""> -->
+                </div>
+                <!-- 电话隐藏模块 -->
+                <div class="quanju" v-show="phone">
+                  <div class="dialog-wrap">
+                    <div class="wrap-header">
+                        电话咨询
+                        <p class="wrap-right-icon" @click="phone1"></p>
+                    </div>
+                    <div class="wrap-phone">
+                      <div class="wrap-club">
+                        艾迪犬舍
+                      </div>
+                      <div>
+                          联系人：<span>李先生</span>
+                      </div>
+                      <div>
+                          联系电话：<span>1567819546</span> 
+                      </div>
+                      <div>联系我时，请说是在淘狗网看到的谢谢！</div>
+                    </div>
+                    
+                  </div>
+                </div> 
+                <span>{{textlist.title}}</span>
+                <a href="#"><img src="" alt="">{{textlist.nickname}}</a>
+                <p>浏览次数：{{textlist.views}}</p>
+                <p>淘狗价:<span>¥{{textlist.price}}</span>/只</p>
+                <p>保障值：</p>
+                <div>
+                  <ul>
+                    <li>
+                      <p>在售只数</p>
+                      <p class="p-color">{{textlist.saleCount}}只</p>
+                    </li>
+                    <li>
+                      <p>年龄</p>
+                      <p class="p-color">{{textlist.age}}</p>
+                    </li>
+                    <li>
+                      <p>品种</p>
+                      <p class="p-color">{{textlist.dogtype}}</p>
+                    </li>
+                    <li>
+                      <p>防疫</p>
+                      <p class="p-color">{{textlist.vaccine}}针</p>
+                    </li>
+                  </ul>
+                </div>
+                <p>联系人：{{textlist.linkman}} 【当天下单包邮送用品一套】
+                <span class="span-style">已交保证金</span>
+                <span class="span-style">实名认证</span>
+                </p>
+                <p>地址: {{textlist.address}} 【官方自营】【CKU认证犬舍】【微信电话同步】</p>
+                 <!--qq图标  -->
+                <p>QQ:<a href="#" id="QQ-a"><img src="image/qq.png" alt=""></a></p> 
+                 <!--咨询方式-->
+                <div class="advisory-way ">
+                  <a href="javascript:;" @click="thePhone"><div></div>电话咨询</a>
+                  <a href="javascript:;" @click="theWx"><div></div><span>微信咨询</span></a>
+                  <!-- 加入购物车 -->
+                  <a href="javascript:;" @click.prevent="addProduct"><div class="shop-car"></div><span>加入购物车</span></a>
+                </div>
+              </div>
+							<!-- 详情框底栏 -->
+							<div class="details-footer clear">
+								<!--左浮动部分 -->
+								<div class="details-footer-left clear">
+									<a href="#" class="details-footer-a">分享:</a>	
+									<a href="#" class="details-footer-a"></a>	
+									<a href="#" class="details-footer-a"></a>	
+									<a href="#" class="details-footer-a"></a>	
+									<a href="#" class="details-footer-a"></a>	
+									<a href="#" class="details-footer-a"></a>	
+									<a href="#" class="details-footer-a">举报</a>	
+								</div>
+								<!--右浮动部分-->
+								<div class="details-footer-right">
+									<a href="#">{{textlist.dogtype}}</a>
+								</div>
+							</div>
+            </div>
+						<!-- 第二部分大详情框-->
+						<div id="product-details">
+							<!--详情框左侧部分-->
+							<div class="product-details-left">
+								<!-- 详情框左侧第一部分 -->
+								<div class="product-left-first">
+									<div class="left-first-one">商品详情</div>
+									<div class="left-first-two" id="details-msg">
+										<div>
+											<h2>基本信息</h2>
+											<ul>
+												<li v-for="(item,i) of listC"><span>{{listD[i]}}:</span>{{item}}</li>
+												<!-- <li><span>别名:</span>斗牛犬</li>
+												<li><span>身高:</span>30-31cm</li>
+												<li><span>体重:</span>10-20kg</li>
+												<li><span>寿命:</span>12-15岁</li>
+												<li><span>功能:</span>家庭犬</li>
+												<li><span>产地:</span>法国</li> -->
+											</ul>
+										</div>
+										<div>
+											<h2>详细特征</h2>
+											<ul>
+												<li v-for="item of listA">
+												  <span>{{item[1]}}:</span>
+												  <div class="big-bgimg">
+													  <div class="small-bgimg" :style="{width:item[0]}"></div>
+												  </div>
+												</li>
+                        <li>
+												  <!-- <span>掉毛程度:</span>
+												  <div class="big-bgimg">
+													  <div class="small-bgimg"></div>
+												  </div>
+												</li>
+                        <li>
+												  <span>美颜频度:</span>
+												  <div class="big-bgimg">
+													  <div class="small-bgimg"></div>
+												  </div>
+												</li>
+                        <li>
+												  <span>运动量度:</span>
+												  <div class="big-bgimg">
+													  <div class="small-bgimg"></div>
+												  </div>
+												</li>
+                        <li>
+												  <span>口水程度:</span>
+												  <div class="big-bgimg">
+													  <div class="small-bgimg"></div>
+												  </div>
+												</li>
+                        <li>
+												  <span>耐热程度:</span>
+												  <div class="big-bgimg">
+													  <div class="small-bgimg"></div>
+												  </div>
+												</li> -->
+											</ul>	
+										</div>
+										<div>
+											<h2>&nbsp</h2>
+											<ul>
+												<li v-for="item of listB">
+												  <span>{{item[1]}}:</span>
+												  <div class="big-bgimg">
+													  <div class="small-bgimg" :style="{width:item[0]}"></div>
+												  </div>
+												</li>
+                        <!-- <li>
+												  <span>友善程度:</span>
+												  <div class="big-bgimg">
+													  <div class="small-bgimg"></div>
+												  </div>
+												</li>
+                        <li>
+												  <span>可训程度:</span>
+												  <div class="big-bgimg">
+													  <div class="small-bgimg"></div>
+												  </div>
+												</li>
+                        <li>
+												  <span>耐热程度:</span>
+												  <div class="big-bgimg">
+													  <div class="small-bgimg"></div>
+												  </div>
+												</li>
+                        <li>
+												  <span>耐寒程度:</span>
+												  <div class="big-bgimg">
+													  <div class="small-bgimg"></div>
+												  </div>
+												</li>
+                        <li>
+												  <span>城市适应:</span>
+												  <div class="big-bgimg">
+													  <div class="small-bgimg"></div>
+												  </div>
+												</li> -->
+											</ul>	
+										</div>
+									</div>
+								</div>
+                <!--详情框左侧第二部分-->
+                <div class="product-left-second">
+                  <!--图片部分-->
+                  <div><img src="image/details-img/1.png" alt="【cku认证犬舍】精品法国斗牛犬繁殖基地，纯中繁殖犬舍" title="【cku认证犬舍】精品法国斗牛犬繁殖基地，纯中繁殖犬舍"></div>
+                  <!-- <div><img src="image/details-img/2.png" alt="【cku认证犬舍】精品法国斗牛犬繁殖基地，纯中繁殖犬舍"
+                  title="【cku认证犬舍】精品法国斗牛犬繁殖基地，纯中繁殖犬舍"></div>
+                  <div><img src="image/details-img/3.png" alt="【cku认证犬舍】精品法国斗牛犬繁殖基地，纯中繁殖犬舍" title="【cku认证犬舍】精品法国斗牛犬繁殖基地，纯中繁殖犬舍"></div>
+                  <div><img src="image/details-img/4.png" alt="【cku认证犬舍】精品法国斗牛犬繁殖基地，纯中繁殖犬舍" title="【cku认证犬舍】精品法国斗牛犬繁殖基地，纯中繁殖犬舍"></div>
+                  <div><img src="image/details-img/6.png" alt="【cku认证犬舍】精品法国斗牛犬繁殖基地，纯中繁殖犬舍" title="【cku认证犬舍】精品法国斗牛犬繁殖基地，纯中繁殖犬舍"></div>
+                  <div><img src="image/details-img/7.png" alt="【cku认证犬舍】精品法国斗牛犬繁殖基地，纯中繁殖犬舍" title="【cku认证犬舍】精品法国斗牛犬繁殖基地，纯中繁殖犬舍"></div>
+                  <div><img src="image/details-img/8.png" alt="【cku认证犬舍】精品法国斗牛犬繁殖基地，纯中繁殖犬舍" title="【cku认证犬舍】精品法国斗牛犬繁殖基地，纯中繁殖犬舍"></div> -->
+                </div>
+                <div id="d1">
+                    <div v-for="item of footerlist" :style="{top:item.mTop+'px',left:item.mLeft+'px'}">
+                        <img :src="item.img_url"  alt="">
+                    </div>
+                    <!-- <div>
+                        <img src="image/details-img/images/21.png" alt="">
+                    </div>
+                    <div>
+                        <img src="image/details-img/images/21.png" alt="">
+                    </div>
+                    <div>
+                        <img src="image/details-img/images/21.png" alt="">
+                    </div>
+                    <div>
+                        <img src="image/details-img/images/21.png" alt="">
+                    </div>
+                    <div>
+                        <img src="image/details-img/images/21.png" alt="">
+                    </div>
+                    <div>
+                        <img src="image/details-img/images/21.png" alt="">
+                    </div>
+                    <div>
+                        <img src="image/details-img/images/21.png" alt="">
+                    </div> -->
+                </div>
+								<!--详情框左侧第三部分-->
+								<div class="product-left-third">
+									<div class="left-third-one">同类宠物推荐</div>
+									<div class="left-third-two" id="leftThird">
+										<ul id="leftThirdUl">
+											<li v-for="item of list" :key="item.sid">
+												<a href="javascript:;" >
+													<div class="third-two-img">
+													 <img :src="item.img_url" alt="">
+													</div>
+													<p class="p-overflow">{{item.title}}</p>
+													<p>价格:<span>¥{{item.price}}元</span></p>
+												</a>
+											</li>
+											<!-- <li>
+											  <a href="">
+												  <div class="third-two-img">
+													 <img src="image/images/tongleichongwu/1.png" alt="">
+													</div>
+													<p class="p-overflow">【cku认证犬舍】精品法国斗牛犬繁殖基地</p>
+													<p>价格:<span>¥1500元</span></p>
+												</a>
+											</li> -->
+											<!-- <li>
+											  <a href="">
+											    <div class="third-two-img">
+													 <img src="image/images/tongleichongwu/1.png" alt="">
+													</div>
+													<p class="p-overflow">【cku认证犬舍】精品法国斗牛犬繁殖基地</p>
+													<p>价格:<span>¥1500元</span></p>
+												</a>
+											</li> -->
+											<!-- <li>
+											  <a href="">
+											    <div class="third-two-img">
+													 <img src="image/images/tongleichongwu/1.png" alt="">
+													</div>
+													<p class="p-overflow">【cku认证犬舍】精品法国斗牛犬繁殖基地</p>
+													<p>价格:<span>¥1500元</span></p>
+												</a>
+											</li> -->
+                    </ul>
+                    <button class="left-third-button" @click.prevent="prev"><</button>
+                    <button class="right-third-button" @click.prevent="next">></button>
+                  </div>
+								</div>
+								<!--详情框左侧第四部分-->
+								<div class="product-left-fourth">
+								</div>
+							</div>
+							<!--详情框右侧部分-->
+							<div class="product-details-right">
+                <!-- 详情右侧第一个框-->
+                <div class="product-right-first">
+                  <div class="right-first-one">宠物推荐</div>
+                    <ul>
+                      <li>
+                        <a href="#" class="first-one-a">
+                          <div><img src="image/chongwutuijian/1.png" alt=""></div>
+                          <div class="first-div">
+                            <p>【cku认证犬舍宠物繁殖基地】</p> 
+                            <p>性别:母（MM）</p> 
+                            <p class="first-div-p">价格:1500元</p> 
+                          </div>  
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="first-one-a">
+                          <div><img src="image/chongwutuijian/2.png" alt=""></div>
+                          <div class="first-div">
+                            <p>【cku认证犬舍宠物繁殖基地】</p> 
+                            <p>性别:母（MM）</p> 
+                            <p class="first-div-p">价格:1500元</p> 
+                          </div>  
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="first-one-a">
+                          <div><img src="image/chongwutuijian/3.png" alt=""></div>
+                          <div class="first-div">
+                            <p>【cku认证犬舍宠物繁殖基地】</p> 
+                            <p>性别:母（MM）</p> 
+                            <p class="first-div-p">价格:1500元</p> 
+                          </div>  
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="first-one-a">
+                          <div><img src="image/chongwutuijian/4.png" alt=""></div>
+                          <div class="first-div">
+                            <p>【cku认证犬舍宠物繁殖基地】</p> 
+                            <p>性别:母（MM）</p> 
+                            <p class="first-div-p">价格:1500元</p> 
+                          </div>  
+                        </a>
+                      </li>
+                    </ul> 
+                </div>
+                <!--详情右侧第二个框-->
+                <div class="product-right-second" id="product-right-second">
+                  <div class="right-second-one">热门狗狗</div>
+                  <ul class="right-second-two">
+                    <li class="second-two-li" v-for="item of list" :key="item.did" @mouseenter="enter" @mouseleave="leave">
+                      <div class="second-two-relative">
+                        <a href="javascript:;">
+                          <span>01</span>
+                          <span>{{item.dname}}</span>
+                          <span>喜欢:<b>{{item.count}}</b></span>
+                        </a>
+                      </div>
+                      <!-- 详情卡片(隐藏) -->
+                      <div class="second-two-card">
+                        <div class="second-two-img">
+                          <img :src="item.img_url" alt="">
+                        </div>
+                        <div class="second-two-text">
+                          <p>品种:{{item.typeName}}</p>
+                          <p>产地:{{item.address}}</p>
+                        </div>
+                      </div>
+                    </li>
+                    <button id="button-more" @click.prevent="more">加载更多。。。</button>
+                    <!-- <li>
+                      <div class="second-two-relative">
+                        <a href="#">
+                          <span>01</span>
+                          <span>茶杯犬</span>
+                          <span>喜欢:<b>103212</b></span>
+                        </a>
+                      </div>
+                      <div class="second-two-card">
+                        <div class="second-two-img">
+                          <img src="image/brand_dog/1.jpg" alt="">
+                        </div>
+                        <div class="second-two-text">
+                          <p>品种:茶杯犬</p>
+                          <p>产地:美国</p>
+                        </div>
+                      </div>
+                    </li> -->
+                    <!-- <li>
+                      <div class="second-two-relative">
+                        <a href="#">
+                          <span>01</span>
+                          <span>茶杯犬</span>
+                          <span>喜欢:<b>103212</b></span>
+                        </a>
+                      </div>
+                      <div class="second-two-card">
+                        <div class="second-two-img">
+                          <img src="image/brand_dog/1.jpg" alt="">
+                        </div>
+                        <div class="second-two-text">
+                          <p>品种:茶杯犬</p>
+                          <p>产地:美国</p>
+                        </div>
+                      </div>
+                    </li> -->
+                    <!-- <li>
+                      <div class="second-two-relative">
+                        <a href="#">
+                          <span>01</span>
+                          <span>茶杯犬</span>
+                          <span>喜欢:<b>103212</b></span>
+                        </a>
+                      </div>
+                      <div class="second-two-card">
+                        <div class="second-two-img">
+                          <img src="image/brand_dog/1.jpg" alt="">
+                        </div>
+                        <div class="second-two-text">
+                          <p>品种:茶杯犬</p>
+                          <p>产地:美国</p>
+                        </div>
+                      </div>
+                    </li> -->
+                    <!-- <li>
+                      <div class="second-two-relative">
+                        <a href="#">
+                          <span>01</span>
+                          <span>茶杯犬</span>
+                          <span>喜欢:<b>103212</b></span>
+                        </a>
+                      </div>
+                      <div class="second-two-card">
+                        <div class="second-two-img">
+                          <img src="image/brand_dog/1.jpg" alt="">
+                        </div >
+                        <div class="second-two-text">
+                          <p>品种:茶杯犬</p>
+                          <p>产地:美国</p>
+                        </div>
+                      </div>
+                    </li> -->
+                    <!-- <li>
+                      <div class="second-two-relative">
+                        <a href="#">
+                          <span>01</span>
+                          <span>茶杯犬</span>
+                          <span>喜欢:<b>103212</b></span>
+                        </a>
+                      </div>
+                      <div class="second-two-card">
+                        <div class="second-two-img">
+                          <img src="image/brand_dog/1.jpg" alt="">
+                        </div>
+                        <div class="second-two-text">
+                          <p>品种:茶杯犬</p>
+                          <p>产地:美国</p>
+                        </div>
+                      </div>
+                    </li> -->
+                    <!-- <li>
+                      <div class="second-two-relative">
+                        <a href="#">
+                          <span>01</span>
+                          <span>茶杯犬</span>
+                          <span>喜欢:<b>103212</b></span>
+                        </a>
+                      </div>
+                      <div class="second-two-card">
+                        <div class="second-two-img">
+                          <img src="image/brand_dog/1.jpg" alt="">
+                        </div>
+                        <div class="second-two-text">
+                          <p>品种:茶杯犬</p>
+                          <p>产地:美国</p>
+                        </div>
+                      </div>
+                    </li> -->
+                    <!-- <li>
+                      <div class="second-two-relative">
+                        <a href="#">
+                          <span>01</span>
+                          <span>茶杯犬</span>
+                          <span>喜欢:<b>103212</b></span>
+                        </a>
+                      </div>
+                      <div class="second-two-card">
+                        <div class="second-two-img">
+                          <img src="image/brand_dog/1.jpg" alt="">
+                        </div>
+                        <div class="second-two-text">
+                          <p>品种:茶杯犬</p>
+                          <p>产地:美国</p>
+                        </div>
+                      </div>
+                    </li> -->
+                    <!-- <li>
+                      <div class="second-two-relative">
+                        <a href="#">
+                          <span>01</span>
+                          <span>茶杯犬</span>
+                          <span>喜欢:<b>103212</b></span>
+                        </a>
+                      </div>
+                      <div class="second-two-card">
+                        <div class="second-two-img">
+                          <img src="image/brand_dog/1.jpg" alt="">
+                        </div>
+                        <div class="second-two-text">
+                          <p>品种:茶杯犬</p>
+                          <p>产地:美国</p>
+                        </div>
+                      </div>
+                    </li> -->
+                    <!-- <li>
+                      <div class="second-two-relative">
+                        <a href="#">
+                          <span>01</span>
+                          <span>茶杯犬</span>
+                          <span>喜欢:<b>103212</b></span>
+                        </a>
+                      </div>
+                      <div class="second-two-card">
+                        <div class="second-two-img">
+                          <img src="image/brand_dog/1.jpg" alt="">
+                        </div>
+                        <div class="second-two-text">
+                          <p>品种:茶杯犬</p>
+                          <p>产地:美国</p>
+                        </div>
+                      </div>
+                    </li> -->
+                    <!-- <li>
+                      <div class="second-two-relative">
+                        <a href="#">
+                          <span>01</span>
+                          <span>茶杯犬</span>
+                          <span>喜欢:<b>103212</b></span>
+                        </a>
+                      </div>
+                      <div class="second-two-card">
+                        <div class="second-two-img">
+                          <img src="image/brand_dog/1.jpg" alt="">
+                        </div>
+                        <div class="second-two-text">
+                          <p>品种:茶杯犬</p>
+                          <p>产地:美国</p>
+                        </div>
+                      </div>
+                    </li>  -->
+                    <!-- <li>
+                      <div>
+                        <a href="#">
+                          <span>01</span>
+                          <span>茶杯犬</span>
+                          <span>喜欢:<b>103212</b></span>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a href="#">
+                          <span>01</span>
+                          <span>茶杯犬</span>
+                          <span>喜欢:<b>103212</b></span>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a href="#">
+                          <span>01</span>
+                          <span>茶杯犬</span>
+                          <span>喜欢:<b>103212</b></span>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a href="#">
+                          <span>01</span>
+                          <span>茶杯犬</span>
+                          <span>喜欢:<b>103212</b></span>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a href="#">
+                          <span>01</span>
+                          <span>茶杯犬</span>
+                          <span>喜欢:<b>103212</b></span>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a href="#">
+                          <span>01</span>
+                          <span>茶杯犬</span>
+                          <span>喜欢:<b>103212</b></span>
+                        </a>
+                      </div>
+                    </li>
+                    <li>
+                      <div>
+                        <a href="#">
+                          <span>01</span>
+                          <span>茶杯犬</span>
+                          <span>喜欢:<b>103212</b></span>
+                        </a>
+                      </div>
+                    </li> -->
+                  </ul>
+                </div>
+                <!--详情右侧第三个框-->
+                <div class="product-right-third">
+                  <div class="right-third-one">宠物狗百科</div>
+                  <div class="right-third-two">
+                    <ul>
+                      <li><a href="#">泰迪犬</a></li>
+                      <li><a href="#">比熊犬</a></li>
+                      <li><a href="#">萨摩耶犬</a></li>
+                      <li><a href="#">哈士奇</a></li>
+                      <li><a href="#">雪纳瑞</a></li>
+                      <li><a href="#">柯基犬</a></li>
+                      <li><a href="#">阿拉斯加</a></li>
+                      <li><a href="#">柴犬</a></li>
+                      <li><a href="#">英国斗牛犬</a></li>
+                      <li><a href="#">马犬</a></li>
+                      <li><a href="#">藏獒</a></li>
+                      <li><a href="#">约克夏犬</a></li>
+                    </ul>
+										<ul>
+                      <li><a href="#">金毛犬</a></li>
+                      <li><a href="#">拉布拉多犬</a></li>
+                      <li><a href="#">博美犬</a></li>
+                      <li><a href="#">边境牧羊犬</a></li>
+                      <li><a href="#">贵宾犬</a></li>
+                      <li><a href="#">茶杯犬</a></li>
+                      <li><a href="#">法国斗牛犬</a></li>
+                      <li><a href="#">八哥犬</a></li>
+                      <li><a href="#">巴吉度犬</a></li>
+                      <li><a href="#">巨型贵宾犬</a></li>
+                      <li><a href="#">沙皮</a></li>
+                      <li><a href="#">约克夏犬</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div> 
+            <footer id="footers"></footer>  
+            <div id="shopBar"></div>
+     </div>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/axios.min.js"></script>
+        <script src="js/vue.js"></script>
+        <script src="js/shopbar.js"></script>
+        <!-- <script src="js/popper.min.js"></script> -->
+        <!-- <script src="js/bootstrap.min.js"></script> -->
+        <script src="js/footer.js"></script>
+        <script src="js/details.js"></script>
+  </body>
+</html>

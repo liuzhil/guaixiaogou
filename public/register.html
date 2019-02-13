@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+		<link rel="stylesheet" href="css/register.css">
+    <link rel="stylesheet" href="bootstrapCss/bootstrap.css"/>
+  </head>
+  <body class="style">
+    <header id="header"></header>
+    <!-- 注册主体内容     -->
+    <div class="register-max-width">
+      <!--注册模块，左侧        -->
+			<div id="left-register">
+        <h3>淘狗网账号注册</h3>
+        <form action="">
+        <div class="userName">
+          <span>用户名: </span> <input type="text" class="input-size" placeholder="用户名" autofocus>
+          <span></span>  
+        </div>
+        <div class="userPwd">
+          <span>密码: </span> <input type="password" class="input-size" placeholder="密码">
+          <span></span>
+        </div>
+        <div>
+          <span>确认密码: </span> <input type="password" class="input-size" placeholder="确认密码"> 
+          <span></span> 
+        </div>
+        <div class="userPhone">
+          <span>手机号码: </span> <input type="text" class="input-size" placeholder="手机号码">
+          <span></span>
+        </div>
+        <div>
+          <span>填写验证码: </span> 
+          <input type="text" placeholder="验证码" class="input-width input-size">
+          <a href="javascript:;" class="verify"></a>
+          <span></span>
+        </div>
+        <div id="agree">
+          <input type="checkbox" class="checkbox">我已阅读并同意服务协议
+        </div>
+        <div>
+          <button data-togger="register">注册</button>
+          <p></p>
+          <div></div>
+        </div>
+        </form>
+      </div> 
+			<div id="right-content">
+        <p>如您已是会员，请<a href="http://127.0.0.1:5500/login.html">登录</a></p>
+        <p>1.注册用户可以免费发布5个产品。</p>
+        <p>2.注册用户每天6个小时可以刷新一下产品。</p>
+        <p>3.注册就可以获得5个淘狗币。</p>
+      </div> 
+    </div>
+    <footer id="footers"></footer>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/register.js"></script>
+    <script src="js/footer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/product.css">
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <!-- <header id="header"></header> -->
+    <header class="max-width" id="header">
+        <div class="top-black" id="header-top">
+          <p class="float-left">欢迎来到淘狗网，宠物狗销售商城！</p>
+          <div class="float-right">
+            <ul class="flex-wrap-end">
+              <li>
+                <a href="#">登录</a>
+                <b>|</b>
+              </li>
+              <li>
+                <a href="#">注册</a>
+                <b>|</b>
+              </li>
+              <li>
+                <a href="#" class="yellwo">免费发布信息</a>
+                <b>|</b>
+              </li>
+              <li>
+                <a href="#">手机淘狗</a>
+                <b>|</b>
+              </li>
+              <li>
+                <a href="#">淘狗网</a>
+                <b>|</b>
+              </li>
+              <li>
+                <a href="#">帮助中心</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="header-search">
+          
+          <div class="d1">
+            <img src="image/images/logo.png" alt="">
+          </div>
+         
+          <div class="d2">
+            <a href="#"></a>
+            <input type="text" id="text">
+            <input type="submit" value="搜索" class="sousuo">
+          </div>
+        </div>
+        <nav id="nav">
+          <div class="clear">
+            <ul class="ul-flex">
+              <li><a href="#">首页</a></li>
+              <li><a href="#">挑选爱犬</a></li>
+             
+              <li><a href="#">挑选爱猫</a></li>
+            
+              <li><a href="#">宠物咨询</a></li>
+              
+              <li><a href="#">狗狗百科</a></li>
+             
+              <li><a href="#">猫猫百科</a></li>
+            
+              <li><a href="#">宠小宝APP</a></li>
+              <li id="select">
+              <div>
+               <a href="#" class="animals-a">加盟宠物店 <span class="sanjiao"></span></a>
+               <ul>
+                 <li><a href="#">开宠物店</a></li>
+                 <li><a href="#">学宠物美容</a></li>
+                 <li><a href="#">学训犬</a></li>
+               </ul>
+              </div>
+              </li>
+            </ul>
+            </div>
+        </nav>
+    </header> 
+    <div id="product">
+        <div class="product">
+            <!-- 查询框 -->
+            <div class="product-query">
+                <!-- 区域 -->
+                <div class="query-document">
+                    <div>区域:</div>
+                    <ul>
+                      <li><a href="javascript:;">不限</a></li>
+                      <li><a href="javascript:;">东城</a></li>
+                      <li><a href="javascript:;">西城</a></li>
+                      <li><a href="javascript:;">崇文</a></li>
+                      <li><a href="javascript:;">宣武</a></li>
+                      <li><a href="javascript:;">朝阳</a></li>
+                      <li><a href="javascript:;">海淀</a></li>
+                      <li><a href="javascript:;">丰台</a></li>
+                      <li><a href="javascript:;">石景山</a></li>
+                      <li><a href="javascript:;">门头沟</a></li>
+                      <li><a href="javascript:;">房山</a></li>
+                      <li><a href="javascript:;">通州</a></li>
+                      <li><a href="javascript:;">顺义</a></li>
+                      <li><a href="javascript:;">大兴</a></li>
+                      <li><a href="javascript:;">昌平</a></li>
+                      <li><a href="javascript:;">平谷</a></li>
+                      <li><a href="javascript:;">怀柔</a></li>
+                      <li><a href="javascript:;">延庆</a></li>
+                      <li><a href="javascript:;">密云</a></li>
+                    </ul>
+                </div>
+                <!-- 体型 -->
+                <div class="query-document">
+                    <div>体型:</div>
+                    <ul>
+                      <li><a href="javascript:;">不限</a></li>
+                      <li><a href="javascript:;">小型</a></li>
+                      <li><a href="javascript:;">中型</a></li>
+                      <li><a href="javascript:;">大型</a></li>
+                    </ul>
+                </div>
+                <!-- 犬种 -->
+                <div class="query-document">
+                    <div>犬种:</div>
+                    <ul>
+                      <li><a href="javascript:;">不限</a></li>
+                      <li><a href="javascript:;">泰迪</a></li>
+                      <li><a href="javascript:;">金毛</a></li>
+                      <li><a href="javascript:;">拉布拉多</a></li>
+                      <li><a href="javascript:;">比熊</a></li>
+                      <li><a href="javascript:;">德牧</a></li>
+                      <li><a href="javascript:;">萨摩耶</a></li>
+                      <li><a href="javascript:;">博美</a></li>
+                      <li><a href="javascript:;">哈士奇</a></li>
+                      <li><a href="javascript:;">贵宾犬</a></li>
+                      <li><a href="javascript:;">柯基犬</a></li>
+                      <li><a href="javascript:;">茶杯犬</a></li>
+                      <li><a href="javascript:;">阿拉斯加</a></li>
+                      <li><a href="javascript:;">法国斗牛犬</a></li>
+                      <li><a href="javascript:;">英国斗牛犬</a></li>
+                      <li><a href="javascript:;">柴犬</a></li>
+                      <li><a href="javascript:;">秋田犬</a></li>
+                      <li><a href="javascript:;">八哥犬</a></li>
+                      <li><a href="javascript:;">马犬</a></li>
+                      <li><a href="javascript:;">沙皮</a></li>
+                      <li><a href="javascript:;">牛头梗</a></li>
+                      <li><a href="javascript:;">松狮犬</a></li>
+                    </ul>
+                </div>
+                <!-- 年龄 -->
+                <div class="query-document">
+                    <div>年龄:</div>
+                    <ul>
+                      <li><a href="javascript:;">不限</a></li>
+                      <li><a href="javascript:;">3月龄以下</a></li>
+                      <li><a href="javascript:;">3-5月龄</a></li>
+                      <li><a href="javascript:;">5-12月龄</a></li>
+                      <li><a href="javascript:;">1岁以上</a></li>
+                    </ul>
+                </div>
+                <!-- 价格 -->
+                <div class="query-document">
+                    <div>价格:</div>
+                    <ul>
+                      <li><a href="javascript:;">不限</a></li>
+                      <li><a href="javascript:;">2000-3000元</a></li>
+                      <li><a href="javascript:;">3000-4000元</a></li>
+                      <li><a href="javascript:;">4000-5000元</a></li>
+                      <li><a href="javascript:;">5000元以上</a></li>
+                      <li>
+                          <input type="text">
+                          -
+                          <input type="text">元
+                          <button>确定</button>
+                      </li>
+                    </ul>
+                </div>
+                <!-- 疫苗 -->
+                <div class="query-document">
+                    <div>疫苗:</div>
+                    <ul>
+                      <li><a href="javascript:;">不限</a></li>
+                      <li><a href="javascript:;">未做</a></li>
+                      <li><a href="javascript:;">1针</a></li>
+                      <li><a href="javascript:;">2针</a></li>
+                      <li><a href="javascript:;">3针</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 图片框 -->
+            <div>
+                <img src="image/product/firstbig.jpg" alt="">
+            </div>
+            <!-- 宠物详情列表 -->
+            <div class="product-animals">
+                <!-- 左侧部分 -->
+                <div class="animals-left">
+                    <!-- 商品标题 -->
+                    <div class="left-first">
+                        <div>商家</div>
+                        <div>商家推广服务热线:&nbsp<span>027-65388817</span></div>
+                    </div>
+                    <!-- 宠物列表部分 -->
+                    <div class="left-second">
+                        <ul>
+                            <li v-show="pageCount==0" id="new-li">
+                                <div class="new-div">
+                                    <p class="new-p">当前选择的宠物类型下没有找到与<span><sup>"</sup>{{kwords}}<sup>"</sup></span>相关的商品。</p>
+                                    <div class="new-div2">
+                                        <p>1.重新选择宠物种类</p>
+                                        <p>2.查看输入文字是否有误</p>
+                                        <p>3.调整关键字 </p>
+                                        <a href="index.html">>>>返回首页</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li v-for="(p,i) of products" @click="jumpDetails(p.did)" >
+                                <!-- 左侧 -->
+                                <div class="second-left">
+                                    <img :src="img[i]" alt="">
+                                </div>
+                                <!-- 中间 -->
+                                <div class="second-center">
+                                   <a href="javascript:;"><img src="image/images/svip.png" alt=""><b>{{p.title}}</b></a>
+                                   <p>犬种:&nbsp&nbsp{{p.dogtype}}</p>
+                                   <p>{{p.nikename}}&nbsp&nbsp{{p.address}}</p>
+                                   <div class="animals-smimg">
+                                       <!-- 70*53 -->
+                                       <img v-for="img of arrImg[i]" alt="" :src="img">
+                                       <!-- <img src="image/productdogs/1-2md.jpg" alt="">
+                                       <img src="image/productdogs/1-3md.jpg" alt=""> -->
+                                   </div> 
+                                </div>
+                                <!-- 右侧 -->
+                                <div class="second-right">
+                                    <p><a href="javascript">5年淘狗通</a></p>
+                                    <p>现购: <span>￥{{p.price}}</span></p>
+                                </div>
+                            </li>
+                            <!-- 分页部分 -->
+                            <li id="second-paging" v-show="pageCount!=0">
+                                <ul class="second-paging">
+                                    <li><button @click.prevent="prev()" :disabled="prevDisabled">上一页</button></li>
+                                    <li v-for="(p,i) of page" @click="jump(p-1,$event)" ><button :class="p-1==pno?'active':''">{{p}}</button></li>
+                                    <!-- <li><button>2</button></li>
+                                    <li><button>3</button></li>
+                                    <li><button>4</button></li>
+                                    <li><button>5</button></li> -->
+                                    <li  ><button @click.prevent="next()" :disabled="nextDisabled">下一页</button></li>
+                                </ul>
+                            </li>
+                            <!-- 网站提示 -->
+                            <li id="website-message">
+                                <div>
+                                  <h3>淘狗网为您提示</h3>
+                                  <p>北京市 淘狗网狗狗价格频道为网民提供最新狗狗价格信息,这里有大量的狗狗图片信息供您查看。查看狗狗价格、狗狗图片,请到淘狗网买狗狗频道</p>
+                                </div>
+                                <div>
+                                    <h3>宠物狗相关城市</h3>
+                                    <ul>
+                                        <li><a href="javascript:;">北京市宠物狗</a></li>
+                                        <li><a href="javascript:;">上海市宠物狗</a></li>
+                                        <li><a href="javascript:;">广州宠物狗</a></li>
+                                        <li><a href="javascript:;">深圳宠物狗</a></li>
+                                        <li><a href="javascript:;">成都宠物狗</a></li>
+                                        <li><a href="javascript:;">青岛宠物狗</a></li>
+                                        <li><a href="javascript:;">济南宠物狗</a></li>
+                                        <li><a href="javascript:;">郑州市宠物狗</a></li>
+                                        <li><a href="javascript:;">昆明市宠物狗</a></li>
+                                        <li><a href="javascript:;">贵阳市宠物狗</a></li>
+                                        <li><a href="javascript:;">沈阳宠物狗</a></li>
+                                        <li><a href="javascript:;">大连宠物狗</a></li>
+                                        <li><a href="javascript:;">长春市宠物狗</a></li>
+                                        <li><a href="javascript:;">天津市宠物狗</a></li>
+                                        <li><a href="javascript:;">杭州宠物狗</a></li>
+                                        <li><a href="javascript:;">无锡宠物狗</a></li>
+                                        <li><a href="javascript:;">苏州宠物狗</a></li>
+                                        <li><a href="javascript:;">南京宠物狗</a></li> <li><a href="javascript:;">哈尔滨宠物狗</a></li>
+                                        <li><a href="javascript:;">太原市宠物狗</a></li>
+                                        <li><a href="javascript:;">石家庄宠物狗</a></li>
+                                        <li><a href="javascript:;">合肥市宠物狗</a></li>
+                                        <li><a href="javascript:;">厦门市宠物狗</a></li>
+                                        <li><a href="javascript:;">南宁宠物狗</a></li>
+                                        <li><a href="javascript:;">东莞宠物狗</a></li>
+                                        <li><a href="javascript:;">长沙市宠物狗</a></li>
+                                        <li><a href="javascript:;">南昌市宠物狗</a></li>
+                                        <li><a href="javascript:;">拉萨宠物狗</a></li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 右侧部分 -->
+                <!-- <div class="animals-right">
+                    <div>
+                        <a href="javascript:;"><img src="image/taogou.png" alt=""></a>
+                    </div>
+                    <ul>
+                        <li><a href="javascript:;"><img src="image/product-rightimg/1.jpg" alt=""></a></li>
+                        <li><a href="javascript:;"><img src="image/product-rightimg/2.gif" alt=""></a></li>
+                        <li><a href="javascript:;"><img src="image/product-rightimg/1.jpg" alt=""></a></li>
+                        <li><a href="javascript:;"><img src="image/product-rightimg/3.gif" alt=""></a></li>
+                        <li><a href="javascript:;"><img src="image/product-rightimg/1.jpg" alt=""></a></li>
+                        <li><a href="javascript:;"><img src="image/product-rightimg/2.gif" alt=""></a></li>
+                        <li><a href="javascript:;"><img src="image/product-rightimg/1.jpg" alt=""></a></li>
+                        <li><a href="javascript:;"><img src="image/product-rightimg/3.gif" alt=""></a></li>
+                        <li><a href="javascript:;"><img src="image/product-rightimg/1.jpg" alt=""></a></li>
+                    </ul>
+                </div> -->
+            </div>
+            <!-- 图片框 -->
+            <div class="second-img">
+                <img src="image/product/second.jpg" alt="">
+            </div>
+            <!-- 热门宠物 -->
+            <div class="hot-animals">
+                <h3>热门宠物狗</h3>
+                <ul>
+                    <li><a href="javascript:;">北京市茶杯犬</a></li>
+                    <li><a href="javascript:;">北京市泰迪犬</a></li>
+                    <li><a href="javascript:;">北京市萨摩耶犬</a></li>
+                    <li><a href="javascript:;">北京市拉布拉多犬</a></li>
+                    <li><a href="javascript:;">北京市金毛犬</a></li>
+                    <li><a href="javascript:;">北京市阿拉斯加</a></li>
+                    <li><a href="javascript:;">北京市哈士奇</a></li>
+                    <li><a href="javascript:;">北京市比熊犬</a></li>
+                    <li><a href="javascript:;">北京市英国斗牛犬</a></li>
+                    <li><a href="javascript:;">北京市法国斗牛犬</a></li>
+                    <li><a href="javascript:;">北京市贵宾犬</a></li>
+                    <li><a href="javascript:;">北京市德国牧羊犬</a></li>
+                    <li><a href="javascript:;">北京市吉娃娃</a></li>
+                    <li><a href="javascript:;">北京市秋田犬</a></li>
+                    <li><a href="javascript:;">北京市高加索</a></li>
+                    <li><a href="javascript:;">北京市松狮犬</a></li>
+                    <li><a href="javascript:;">北京市雪纳瑞</a></li>
+                    <li><a href="javascript:;">北京市柴犬</a></li>
+                    <li><a href="javascript:;">北京市马犬</a></li>
+                    <li><a href="javascript:;">北京市边境牧羊犬</a></li>
+                    <li><a href="javascript:;">北京市柯基犬</a></li>
+                    <li><a href="javascript:;">北京市博美犬</a></li>
+                    <li><a href="javascript:;">北京市杜高犬</a></li>
+                    <li><a href="javascript:;">北京市伯恩山犬</a></li>
+                    <li><a href="javascript:;">北京市杜宾</a></li>
+                    <li><a href="javascript:;">北京市罗威纳</a></li>
+                    <li><a href="javascript:;">北京市牛头梗</a></li>
+                    <li><a href="javascript:;">北京市腊肠犬</a></li>
+                    <li><a href="javascript:;">北京市圣伯纳</a></li>
+                    <li><a href="javascript:;">北京市沙皮犬</a></li>
+                    <li><a href="javascript:;">北京市比特犬</a></li>
+                    <li><a href="javascript:;">北京市巴哥犬</a></li>
+                    <li><a href="javascript:;">北京市卡斯罗犬</a></li>
+                    <li><a href="javascript:;">北京市巨型贵宾</a></li>
+                    <li><a href="javascript:;">北京市美国恶霸犬</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <footer id="footers"></footer>
+    <script src="js/axios.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/product.js"></script>
+    <script src="js/footer.js"></script>
+</body>
+
+
+</html>
+<!-- <!doctype html>
+<html>
+  <head>
+    <title></title>
+    <meta charset="utf-8">
+     <link rel="stylesheet" href="../css/header.css">
+  </head>
+  <body> -->
+    <!-- 头部 -->
+
+
+       <!-- <script src="../js/jquery.min.js"></script>
+    <script src="../js/header.js"></script>
+  </body>
+</html> -->

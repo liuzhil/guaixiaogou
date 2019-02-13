@@ -1,0 +1,71 @@
+/*购物车导航栏  */
+.shop-fixed{
+    position:fixed;
+    top:15%;right:0;
+    width:35px;
+    height:80%;
+    background:rgb(145, 144, 144);
+}
+.shop-relative{
+    position: relative;
+    height:100%;
+}
+.isCar{
+    display: block;
+    width:35px;
+    height:35px;
+    background:url(../image/shopbar.png) no-repeat 0 -235px;
+    margin:20px 0;
+    margin-top:60px;
+}
+/* 购物车 */
+.fixed-car{
+    margin-top:30px;
+    display: block;
+    width:35px;
+    height:35px;
+    background:url(../image/shopbar.png) no-repeat 0 -270px;
+}
+.shop-car{
+    width:20px;
+    margin:0 auto;
+    text-align: center;
+}
+/* 购物数量 */
+.count{
+    margin:0 auto;
+    display:inline-block;
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    background:#fff;
+    text-align: center;
+    line-height: 20px;
+    border:0;
+}
+/* 客服 */
+.service-img{
+    margin-top:30px;
+    width:35px;
+    height:35px;
+    display:block;
+    background:url(../image/shopbar.png) no-repeat 2px -617px;
+}
+.service{
+    width:20px;
+    margin:0 auto;
+    text-align: center;
+}
+.shop-phone{
+    margin-top:30px;
+    display: block;
+    width:35px;
+    height:35px;
+    background:url(../image/shopbar.png) no-repeat 0 -410px;
+}
+.shop-wx{
+    display: block;
+    width:35px;
+    height:35px;
+    background:url(../image/shopbar.png) no-repeat 0 -720px;
+}

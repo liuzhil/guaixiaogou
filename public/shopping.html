@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/shoplist.css">
+    <!-- <link rel="stylesheet" href="bootstrapCss/bootstrap.css"/> -->
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div class="shop">
+        <header id="header"></header>
+        <div id="shopCar">
+            <!-- 购物车导航栏 -->
+            <div class="shop-nav">
+                <ul>
+                    <li><a href="javascript:;">淘狗购物车</a></li>
+                    <li><a href="javascript:;">我的收藏</a></li>
+                    <li><a href="javascript:;">我购买过</a></li>
+                    <li><a href="javascript:;">最近浏览</a></li>
+                </ul>
+            </div>
+            <!-- 购物车板块 -->
+            <div class="shop-num">
+                <div><p>您的商品</p></div>
+                <!-- 隐藏部分 -->
+                <div class="hide" v-show="list.length==0">
+                    <div class="hide-D">
+                        <p class="hide-div">您的购物车空空如也，快去购物吧</p>
+                        <a class="hide-a" href="index.html">返回首页</a>
+                    </div>  
+                </div>
+                <!-- 商品显示部分 -->
+                <div v-show="list.length>0">
+                    <div class="shop-num-plate" v-for="(item,i) of list" :data-i="i" v-if="sid!=i">
+                        <div class="shop-numm-list">
+                            <!-- 复选框 -->
+                            <div>
+                                <input type="checkbox" :value="item.id" v-model="checkId" @click="check">
+                            </div>
+                            <!-- 图片加文字 -->
+                            <div>
+                                <a href="javascript:;">
+                                    <img :src="item.img_url" alt="">
+                                </a>
+                                <a href="javascript:;">{{item.pname}}</a>
+                            </div>
+                            <!-- input数量 -->
+                            <div>
+                                <button @click.prevent="sub($event,i)" :data-i="i">-</button>
+                                <input class="count-input" type="text" v-model="count[i]">
+                                <button @click.prevent="add($event,i)" :data-i="i">+</button>
+                            </div>
+                            <!-- 价格 -->
+                            <div>
+                                {{item.price}}
+                            </div>
+                            <!-- 功能键(添加，删除) -->
+                            <div>
+                                <a href="javascript:;">[收藏]</a>
+                                <a href="javascript:;" @click="del($event,i)">[删除]</a>
+                            </div>
+                        </div>
+                    </div>
+                
+                <!-- <div class="shop-num-plate">
+                    <div class="shop-numm-list">
+                        <div>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <a href="javascript:;">
+                                <img src="image/brand_dog/buydog/1.png" alt="">
+                            </a>
+                            <a href="javascript:;">什么鬼东西</a>
+                        </div>
+                        <div>
+                            <button>-</button>
+                            <input type="text">
+                            <button>+</button>
+                        </div>
+                        <div>
+                            ￥1500.00
+                        </div>
+                        <div>
+                            <a href="javascript:;">[收藏]</a>
+                            <a href="javascript:;">[删除]</a>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="shop-num-plate">
+                    <div class="shop-numm-list">
+                        <div>
+                            <input type="checkbox">
+                        </div>
+                        <div>
+                            <a href="javascript:;">
+                                <img src="image/brand_dog/buydog/1.png" alt="">
+                            </a>
+                            <a href="javascript:;">什么鬼东西</a>
+                        </div>
+                        <div>
+                            <button>-</button>
+                            <input type="text">
+                            <button>+</button>
+                        </div>
+                        <div>
+                            ￥1500.00
+                        </div>
+                        <div>
+                            <a href="javascript:;">[收藏]</a>
+                            <a href="javascript:;">[删除]</a>
+                        </div>
+                    </div>
+                </div> -->
+                    <div class="shop-num-buy">
+                        <!-- 全选框 -->
+                        <div>
+                            <input type="checkbox" v-model="checkAll" @click="checkA">全选
+                        </div>
+                        <!-- 功能键 -->
+                        <div>
+                            <a href="javascript:;">[删除选中商品]</a>
+                            <a href="javascript:;">[收藏选中商品]</a>
+                        </div>
+                        <!-- 价格 -->
+                        <div>
+                            总价(不含运费):<span>￥{{total}}</span>
+                        </div>
+                        <!-- 结算button -->
+                        <div>
+                            <button>去结算()</button>
+                        </div>
+                    </div>
+                </div>  
+            </div>
+        </div>
+        <div class="shop-img">
+            <img src="image/details-img/210c2037582c2e460ca368721a7dcb90 (1).jpg" alt="">
+        </div>
+        <div id="shopBar"></div>
+        <footer id="footers"></footer>
+    </div>
+    <script src="js/axios.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/footer.js"></script>
+    <script src="js/shopbar.js"></script>
+    <script src="js/shoplist.js"></script>
+</body>
+</html>
